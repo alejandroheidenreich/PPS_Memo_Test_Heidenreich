@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'pps.ala.rob',
-  appName: 'Alarma de Robo',
+  appId: 'pps.mem.tes',
+  appName: 'MemoTest',
   webDir: 'www',
   server: {
     androidScheme: 'https'

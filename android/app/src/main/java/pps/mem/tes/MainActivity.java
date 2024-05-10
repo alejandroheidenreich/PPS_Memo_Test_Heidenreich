@@ -1,4 +1,4 @@
-package pps.ala.rob;
+package pps.mem.tes;
 
 import com.getcapacitor.BridgeActivity;
 

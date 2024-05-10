@@ -19,56 +19,81 @@
   <form [formGroup]="form" class="login" (ngSubmit)="onSubmit()">
     <ion-card color="secondary" class="ion-text-center">
 
-      <ion-card-header class="ion-text-center">
-        <div>
-          <img src="assets/icon.png" alt="logo" style="width: 60%;">
-        </div>
-
+      <ion-card-header class="ion-text-center" color="tertiary">
+        <br>
+        Acceso Rápido
         <ion-grid>
           <ion-row class="ion-justify-content-between ion-align-items-center">
             <ion-col size="3">
-              <ion-button (click)="logAccount1()" [ngClass]="selected === 1 ? 'selected' : 'notselected'">
-                <ion-icon name="person" color="primary"></ion-icon>
-              </ion-button>
-
-            </ion-col>
-            <ion-col size="3">
-              <ion-button (click)="logAccount2()" [ngClass]="selected === 2 ? 'selected' : 'notselected'">
+              <ion-button (click)="logAccount1()" [ngClass]="selected === 1 ? 'selected' : 'notselected'" size="large">
                 <ion-icon name="person" color="primary"></ion-icon>
               </ion-button>
             </ion-col>
             <ion-col size="3">
-              <ion-button (click)="logAccount3()" [ngClass]="selected === 3 ? 'selected' : 'notselected'">
+              <ion-button (click)="logAccount2()" [ngClass]="selected === 2 ? 'selected' : 'notselected'" size="large">
+                <ion-icon name="person" color="primary"></ion-icon>
+              </ion-button>
+            </ion-col>
+            <ion-col size="3">
+              <ion-button (click)="logAccount3()" [ngClass]="selected === 3 ? 'selected' : 'notselected'" size="large">
                 <ion-icon name="person" color="primary"></ion-icon>
               </ion-button>
             </ion-col>
           </ion-row>
         </ion-grid>
-
+        <br>
       </ion-card-header>
 
-
+      @if(!register){
+      <br>
+      }
       <ion-card-content>
         <ion-list>
+          Correo
           <ion-item color="tertiary">
-            <ion-input type="email" placeholder="Correo" formControlName="email"></ion-input>
+            <ion-input type="email" placeholder="Ingrese su correo" formControlName="email"></ion-input>
           </ion-item>
           <br>
+          Contraseña
           <ion-item color="tertiary">
-            <ion-input type="password" placeholder="Contraseña" formControlName="password"></ion-input>
+            <ion-input type="password" placeholder="Ingrese su contraseña" formControlName="password"></ion-input>
           </ion-item>
           @if(register){
           <br>
+          Repetir contraseña
           <ion-item color="tertiary">
-            <ion-input type="password" placeholder="Repetir contraseña" formControlName="password2"></ion-input>
+            <ion-input type="password" placeholder="Reingrese la contraseña" formControlName="password2"></ion-input>
           </ion-item>
 
           }
         </ion-list>
+
+        @if(!register){
+        <br>
+        <br>
+        }
+
+        <ion-grid>
+          <ion-row class="ion-justify-content-center">
+            <ion-col size="6">
+              <ion-button type="submit" color="tertiary" size="large" expand="full">
+                <div>
+                  <img src="assets/icon.png" alt="logo">
+                </div>
+                <!-- <ion-icon name="log-in" size="large"></ion-icon>
+                  @if(register){
+                  REGISTRAR
+                  }
+                  @else{
+                  INGRESAR
+                  } -->
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       </ion-card-content>
       <br>
       <ion-card-subtitle>
-        <!-- <hr> -->
         @if(register){
         <a id="mode" (click)="changeMode()" class="text-bold"> Ingresar</a>
         }
@@ -78,28 +103,10 @@
       </ion-card-subtitle>
       <br>
 
+      <br>
     </ion-card>
 
-    @if(!register){
-    <br>
-    <br>
-    }
 
-    <ion-grid>
-      <ion-row class="ion-justify-content-center">
-        <ion-col size="6">
-          <ion-button type="submit" color="secondary" size="large" expand="full">
-            <ion-icon name="log-in" size="large"></ion-icon>
-            @if(register){
-            REGISTRAR
-            }
-            @else{
-            INGRESAR
-            }
-          </ion-button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
     <ion-loading trigger="mode" message="Loading..." [duration]="3000" spinner="circles"></ion-loading>
 
   </form>
