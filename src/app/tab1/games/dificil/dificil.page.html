@@ -1,17 +1,12 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="secondary" class="ion-text-center">
     <ion-title>difícil</ion-title>
+    <p>Termina antes de los 30 segundos</p>
+    <p>Segundos transcurridos: {{ seconds }}</p>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" color="danger">
-  <div class="ion-text-center">
-
-    <!-- <h1>Tiempo</h1> -->
-    <h2>Termina antes de los 30 segundos</h2>
-    <p>Segundos transcurridos: {{ seconds }}</p>
-  </div>
-
   <ion-grid style="margin-top: 0.5rem;">
     <ion-row>
       <ion-col>

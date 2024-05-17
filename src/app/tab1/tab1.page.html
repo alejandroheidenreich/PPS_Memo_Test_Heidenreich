@@ -1,17 +1,21 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="secondary">
     <ion-title>
-      Tab 1
+      Jugar
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" color="secondary">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
+  <ion-row class="container">
+    <ion-col size="12" class="top text-center" (click)="moveTo('tabs/tab1/facil')">
+      FÁCIL
+    </ion-col>
+    <ion-col size="12" class="medium text-center" (click)="moveTo('tabs/tab1/medio')">
+      MEDIO
+    </ion-col>
+    <ion-col size="12" class="bottom text-center" (click)="moveTo('tabs/tab1/dificil')">
+      DIFÍCIL
+    </ion-col>
+  </ion-row>
 </ion-content>

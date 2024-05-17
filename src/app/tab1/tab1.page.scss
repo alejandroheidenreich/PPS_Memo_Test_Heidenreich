@@ -1,39 +1,85 @@
 .wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    height: 170px;
-    width: 400px;
-    margin: 0 auto;
-  }
-  
-  b {
-    width: 100%;
-  }
-  
-  .ripple-parent {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    position: relative;
-    overflow: hidden;
-  
-    border: 1px solid #ddd;
-  
-    user-select: none;
-  }
-  
-  .rounded-rectangle {
-    width: 250px;
-    height: 75px;
-    border-radius: 8px;
-  }
-  
-  .circle {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  height: 170px;
+  width: 400px;
+  margin: 0 auto;
+}
+
+b {
+  width: 100%;
+}
+
+.ripple-parent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  overflow: hidden;
+
+  border: 1px solid #ddd;
+
+  user-select: none;
+}
+
+.rounded-rectangle {
+  width: 250px;
+  height: 75px;
+  border-radius: 8px;
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  /* Divide la pantalla en dos filas iguales */
+  height: 100%;
+}
+
+
+.top:active,
+.bottom:active,
+.medium:active {
+  transform: scale(0.95);
+  /* Escalar ligeramente cuando se hace clic */
+}
+
+.top,
+.bottom,
+.medium {
+  display: flex;
+  justify-content: center;
+  /* Centra horizontalmente el contenido */
+  align-items: center;
+  /* Centra verticalmente el contenido */
+  border: 2px solid #999;
+  /* Borde de 2px sólido */
+  border-radius: 8px;
+  /* Bordes redondeados */
+  box-shadow: 2px 2px 5px #aaa;
+  /* Sombra */
+}
+
+.top {
+  background-color: var(--ion-color-success);
+  /* Color de fondo para la primera fila */
+}
+
+.medium {
+  background-color: var(--ion-color-warning);
+  /* Color de fondo para la primera fila */
+}
+
+.bottom {
+  background-color: var(--ion-color-danger);
+  /* Color de fondo para la segunda fila */
+}
