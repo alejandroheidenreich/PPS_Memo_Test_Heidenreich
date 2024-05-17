@@ -1,0 +1,118 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary" class="ion-text-center">
+    <ion-title>difícil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="danger">
+  <div class="ion-text-center">
+
+    <!-- <h1>Tiempo</h1> -->
+    <h2>Termina antes de los 30 segundos</h2>
+    <p>Segundos transcurridos: {{ seconds }}</p>
+  </div>
+
+  <ion-grid style="margin-top: 0.5rem;">
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="selectPic(0)" [ngClass]="arrayGame[0] == pregunta? 'notselected' : 'selected'">
+          <img src="{{arrayGame[0]}}" alt="0" style="width: 24%;">
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="selectPic(1)" [ngClass]="arrayGame[1] == pregunta? 'notselected' : 'selected'">
+          <img src="{{arrayGame[1]}}" alt="1" style="width: 24%;">
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="selectPic(2)" [ngClass]="arrayGame[2] == pregunta? 'notselected' : 'selected'">
+          <img src="{{arrayGame[2]}}" alt="2" style="width: 24%;">
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="selectPic(3)" [ngClass]="arrayGame[3] == pregunta? 'notselected' : 'selected'">
+          <img src="{{arrayGame[3]}}" alt="3" style="width: 24%;">
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="selectPic(4)" [ngClass]="arrayGame[4] == pregunta? 'notselected' : 'selected'">
+          <img src="{{arrayGame[4]}}" alt="4" style="width: 24%;">
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="selectPic(5)" [ngClass]="arrayGame[5] == pregunta? 'notselected' : 'selected'">
+          <img src="{{arrayGame[5]}}" alt="5" style="width: 24%;">
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="selectPic(6)" [ngClass]="arrayGame[6] == pregunta? 'notselected' : 'selected'">
+          <img src="{{arrayGame[6]}}" alt="6" style="width: 24%;">
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="selectPic(7)" [ngClass]="arrayGame[7] == pregunta? 'notselected' : 'selected'">
+          <img src="{{arrayGame[7]}}" alt="7" style="width: 24%;">
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="selectPic(8)" [ngClass]="arrayGame[8] == pregunta? 'notselected' : 'selected'">
+          <img src="{{arrayGame[8]}}" alt="8" style="width: 24%;">
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="selectPic(9)" [ngClass]="arrayGame[9] == pregunta? 'notselected' : 'selected'">
+          <img src="{{arrayGame[9]}}" alt="9" style="width: 24%;">
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="selectPic(10)" [ngClass]="arrayGame[10] == pregunta? 'notselected' : 'selected'">
+          <img src="{{arrayGame[10]}}" alt="10" style="width: 24%;">
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="selectPic(11)" [ngClass]="arrayGame[11] == pregunta? 'notselected' : 'selected'">
+          <img src="{{arrayGame[11]}}" alt="11" style="width: 24%;">
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="selectPic(12)" [ngClass]="arrayGame[12] == pregunta? 'notselected' : 'selected'">
+          <img src="{{arrayGame[12]}}" alt="12" style="width: 24%;">
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="selectPic(13)" [ngClass]="arrayGame[13] == pregunta? 'notselected' : 'selected'">
+          <img src="{{arrayGame[13]}}" alt="13" style="width: 24%;">
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="selectPic(14)" [ngClass]="arrayGame[14] == pregunta? 'notselected' : 'selected'">
+          <img src="{{arrayGame[14]}}" alt="14" style="width: 24%;">
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="selectPic(15)" [ngClass]="arrayGame[15] == pregunta? 'notselected' : 'selected'">
+          <img src="{{arrayGame[15]}}" alt="15" style="width: 24%;">
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <br>
+  <ion-button color="tertiary" expand="full" (click)="reset()">
+    Reiniciar
+  </ion-button>
+
+</ion-content>
